@@ -18,10 +18,7 @@ body {
 .subreddit-name{
   text-shadow: 0 0 .1em #fff, 0 0 .2em #fff, 0 0 .5em #fff;
 }
-.logo-space{
-  height:100vh;
-  display: block;
-}
+
 .logo{
   background-size: contain;
   margin-bottom: -0.2em;
