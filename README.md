@@ -30,3 +30,7 @@ What does this mean? User-friendly streams for each music subreddit!
 ###About Snoosic
 
 **Snoosic** was built using a MEAN stack (MongoDB, Express, Angular.js, Node.js)
+
+### Meet the Team
+
+![Snoosic Squad](http://i.imgur.com/EnEeCGl.png)
