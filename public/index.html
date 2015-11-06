@@ -13,26 +13,22 @@
     <title>Snoosic</title>
   </head>
   <body ng-app="SnoosicManager">
-      <div class="row">
-        <div class="col s12">
-
-          <h1 class="logo"><img src="http://i.imgur.com/90DZa4I.png" alt="" /></h1>
-
-          <h5>discover music through Reddit</h5>
-        </div>
-      </div>
 
       <section ng-controller="SnoosicController">
-         <!-- Modal Trigger -->
-           <div class="row">
-             <div class="col s1 offset-s2">
-                <h3 class="reddit-slash">/r/</h3>
-             </div>
-             <div class="input-field col s6">
-                <input type="text" class= "search" name="searchbox" ng-model="searchQuery">
-             </div>
-           </div>
+        <div class="row  logo-space">
+          <div class="col s12">
 
+            <h1 class="logo"><img src="http://i.imgur.com/90DZa4I.png" alt="" /></h1>
+
+            <h5>discover music through Reddit</h5>
+          </div>
+            <div class="col s1 offset-s2">
+               <h3 class="reddit-slash">/r/</h3>
+            </div>
+            <div class="input-field col s6">
+               <input type="text" class= "search" name="searchbox" ng-model="searchQuery">
+            </div>
+        </div>
 
       <!-- Update -->
         <div class="row" >
