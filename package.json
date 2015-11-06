@@ -22,8 +22,9 @@
   },
   "homepage": "https://github.com/nilocy/snoosic#readme",
   "dependencies": {
+    "body-parser": "^1.14.1",
     "express": "^4.13.3",
-    "mongo": "^0.1.0",
+    "mongodb": "^2.0.47",
     "parser": "^0.1.4",
     "path": "^0.12.7",
     "request": "^2.65.0"
