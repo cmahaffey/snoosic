@@ -1,0 +1,24 @@
+{
+  "name": "snoosic",
+  "version": "1.0.0",
+  "description": "a spotify tracklist generator for reddit music subreddits",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nilocy/snoosic.git"
+  },
+  "keywords": [
+    "music",
+    "reddit",
+    "spotify"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nilocy/snoosic/issues"
+  },
+  "homepage": "https://github.com/nilocy/snoosic#readme"
+}
