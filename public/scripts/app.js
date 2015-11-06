@@ -41,15 +41,22 @@ angular.module('SnoosicManager')
     function getUrl(){
       $('.subreddit').on("click", function(e){
         console.log(this.id);
+
+
       });
     }
 
     function cardHover(){
+<<<<<<< HEAD
       $('.subreddit-card').on("mouseover", function(e){
         $(this).css({
         "cursor": "pointer"
         });
         // $(this).find('.subreddit-overlay').show();
+=======
+      $('.subreddit').on("mouseover", function(e){
+        $(this).css({"backgroundColor": "red"})
+>>>>>>> b7aca1349509d0c255110fe923bbfc64d1093ea8
       });
     }
 
