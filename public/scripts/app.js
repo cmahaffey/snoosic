@@ -40,12 +40,13 @@ angular.module('SnoosicManager')
     function getUrl(){
       $('.subreddit').on("click", function(e){
         console.log(this.id);
+
+
       });
     }
 
     function cardHover(){
       $('.subreddit').on("mouseover", function(e){
-        console.log(this);
         $(this).css({"backgroundColor": "red"})
       });
     }
