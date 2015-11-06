@@ -13,10 +13,10 @@
     <title>Snoosic</title>
   </head>
   <body ng-app="SnoosicManager">
-     
       <div class="row">
         <div class="col s12">
-          <h1 class="logo"><img src="http://i.imgur.com/EdKXDLI.png" alt="" /></h1>
+          <h1 class="logo"><img src="http://i.imgur.com/I2wTGnR.png" alt="" /></h1>
+          <h4>Snoosic</h4>
           <h5>discover music through Reddit</h5>
         </div>
       </div>
@@ -37,16 +37,14 @@
         <div class="row" >
           <div class="col s12 m4 l2" ng-repeat="subreddit in subreddits | filter:searchQuery">
             <div class="wrap">
+              <div class="subreddit-overlay"></div>
             <div class="subreddit-card modal-trigger" id="{{ subreddit.url + 'Card'}}" href="#{{subreddit.url}}" style="background:url('{{subreddit.image}}') no-repeat center;background-size:contain;">
               <h5 class="subreddit-name">{{ subreddit.name }} </h5>
               <!-- <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Listen</a> -->
               <div id="{{ subreddit.url}} " class="modal">
                 <div class="modal-content">
                   <h4>{{subreddit.url}}</h4>
-                  <iframe src="https://embed.spotify.com/?uri=spotify:trackset:PREFEREDTITLE:5Z7ygHQo02SUrFmcgpwsKW,1x6ACsKV4UdWS2FMuPFUiT,4bi73jCM02fMpkI11Lqmfe" frameborder="0" allowtransparency="true"></iframe>
-                </div>
-                <div class="modal-footer">
-                  <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">X</a>
+                  <span class="alternate" ng-bind-html="makeHTML(subreddit.spotifyURL)"></span>
                 </div>
               </div>
             </div>
