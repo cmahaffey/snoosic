@@ -1,4 +1,4 @@
-var Music={
+var Music=[
   "42GP0xKtkolBnmqQRvSllO",
 "4r5NuOfXDenScgcmGNHl7F",
 "6XXxkAAmnrc1LI0HMP4tOj",
@@ -18,9 +18,9 @@ var Music={
 "45D0ixQWzXQOoU1S9aSnKk",
 "2KFwKqq5N0BCplqwpppoCo",
 "5kD9T7GForh8LnRz5ClbL8"
-}
+]
 
-var indiefolk={
+var indiefolk=[
   "3LHg768dEKqJKht2uPTlVR",
 "7sh2lOTbbhfkAPx8e6xrB6",
 "5lXbWuVMfrIuMMA4tcF3BW",
@@ -46,9 +46,9 @@ var indiefolk={
 "37oT8H5SBRHUm0E9h6QdnD",
 "1aj4GXfmEYXfdVZohCpNKu",
 "4m66SsO0PNCAhHf2D4PojC"
-}
+]
 
-var indie={
+var indie=[
   "0PiXZzaG3fqwHdEcr3bLqh",
 "2dlnFycyki41VyHgPeRJhV",
 "5rkPztN5ySYKkxIOBb4LAe",
@@ -65,9 +65,9 @@ var indie={
 "3Ix8Z8CW3zXmaNCf3JUbvl",
 "7AeEp1vBiHKvQSQuseVmlY",
 "6fWMEDCURTkeP9bPYvzcJe"
-}
+]
 
-var 90smusic={
+var 90smusic=[
   "7B3UAPLYAbwXVgbHSKEaTw",
 "7lDIFkQ42fYS8InRKHjeOT",
 "53968oKecrFxkErocab2Al",
@@ -80,8 +80,8 @@ var 90smusic={
 "6POg22mKRblbBTi5AW9jEW",
 "06FEsounL5ggjTgO5uZ7GK",
 "3UNpL0Z9e1yoi6Gm2Kx8n7"
-}
-var listentothis={
+]
+var listentothis=[
   "3cTMtCrY00mTKuinlzElwC",
 "191cOCuRmk63xDFQ27TDdu",
 "7BaDRi8gmRnOducT6KaOfc",
@@ -94,9 +94,9 @@ var listentothis={
 "4tzgsfffxB7kXZ9xzMl64s",
 "1gvMBt27zC5oyt5OErGduN",
 "5rJjM5yEsz8tHryQodyZlf"
-}
+]
 
-var treemusic={
+var treemusic=[
 "6N9zd3kTDbfiEWeXK8j2l0",
 "56HYxKJIfClkU3bMCRQ9r5",
 "4jGAEpkUCrxjfORV9J9PmU",
@@ -110,4 +110,4 @@ var treemusic={
 "1t0MqM5NmkvDmruUzHeeUw",
 "5PZ6UQkznLFrB7NR6gRg6q"
 
-}
+]
