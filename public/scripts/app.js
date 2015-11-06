@@ -11,27 +11,32 @@ angular.module('SnoosicManager')
         {
           name: "Music",
           url: "music",
-          image: "http://i.imgur.com/EdKXDLI.png"
+          image: "http://i.imgur.com/uhExyAU.jpg"
         },
         {
           name: "Indie Folk",
-          url: "indiefolk"
+          url: "indiefolk",
+          image: "http://i.imgur.com/8kJu3Hh.jpg"
         },
         {
           name: "Indie",
-          url: "indie"
+          url: "indie",
+          image: "http://i.imgur.com/0wdvNqj.jpg"
         },
         {
           name: "90s Music",
-          url: "90smusic"
+          url: "90smusic",
+          image: "http://i.imgur.com/BpjCyoZ.jpg"
         },
         {
           name: "Listen To This",
-          url: "listentothis"
+          url: "listentothis",
+          image: "http://i.imgur.com/4iZEVv3.jpg"
         },
         {
           name: "Tree Music",
-          url: "treemusic"
+          url: "treemusic",
+          image: "http://i.imgur.com/RdpA4Oj.jpg"
         }
       ]
 
@@ -47,16 +52,11 @@ angular.module('SnoosicManager')
     }
 
     function cardHover(){
-<<<<<<< HEAD
       $('.subreddit-card').on("mouseover", function(e){
         $(this).css({
         "cursor": "pointer"
         });
-        // $(this).find('.subreddit-overlay').show();
-=======
-      $('.subreddit').on("mouseover", function(e){
-        $(this).css({"backgroundColor": "red"})
->>>>>>> b7aca1349509d0c255110fe923bbfc64d1093ea8
+
       });
     }
 
