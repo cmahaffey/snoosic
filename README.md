@@ -26,3 +26,7 @@ As results begin to come in, **Snoosic** generates Spotify playlists that users 
 What does this mean? User-friendly streams for each music subreddit! 
 
 ![narwhal gif](http://i.imgur.com/Chl0i.gif)
+
+###About Snoosic
+
+**Snoosic** was built using a MEAN stack (MongoDB, Express, Angular.js, Node.js)
