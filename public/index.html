@@ -36,7 +36,7 @@
         <div class="row" >
           <div class="col s12 m4 l2" ng-repeat="subreddit in subreddits | filter:searchQuery">
             <div class="wrap">
-            <div class="subreddit-card modal-trigger" id="{{ subreddit.url + 'Card'}}" href="#{{subreddit.url}}" style="background:url('{{subreddit.image}}') no-repeat center;">
+            <div class="subreddit-card modal-trigger" id="{{ subreddit.url + 'Card'}}" href="#{{subreddit.url}}" style="background:url('{{subreddit.image}}') no-repeat center;background-size:contain;">
               <h5 class="subreddit-name">{{ subreddit.name }} </h5>
               <!-- <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Listen</a> -->
               <div id="{{ subreddit.url}} " class="modal">
