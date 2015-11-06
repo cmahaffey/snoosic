@@ -2,7 +2,7 @@
   "name": "snoosic",
   "version": "1.0.0",
   "description": "a spotify tracklist generator for reddit music subreddits",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -20,5 +20,11 @@
   "bugs": {
     "url": "https://github.com/nilocy/snoosic/issues"
   },
-  "homepage": "https://github.com/nilocy/snoosic#readme"
+  "homepage": "https://github.com/nilocy/snoosic#readme",
+  "dependencies": {
+    "body-parser": "^1.14.1",
+    "express": "^4.13.3",
+    "mongodb": "^2.0.47",
+    "request": "^2.65.0"
+  }
 }
