@@ -33,8 +33,6 @@ var subreddits = [
 ];
 
 
-
-
 // client.connect( ( 'mongodb://localhost:27017/snoosic' ), function(error, db) {
 //   if(error){ console.log('DB error', error) } else { console.log('connected to Snoosic DB') }
 //
