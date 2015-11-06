@@ -15,7 +15,7 @@
      
       <div class="row">
         <div class="col s12">
-          <h1>Snoosic</h1>
+          <h1 class="logo"><img src="http://i.imgur.com/EdKXDLI.png" alt="" /></h1>
           <h5>discover music through Reddit</h5>
         </div>
       </div>
@@ -33,18 +33,31 @@
 
 
       <!-- Update -->
-        <div class="row">
+        <div class="row" >
           <div class="col s12 m4 l2" ng-repeat="subreddit in subreddits | filter:searchQuery">
-            <div class="subreddit" id="{{ subreddit.url }}">
+            <div class="wrap">
+            <div class="subreddit-card modal-trigger" id="{{ subreddit.url + 'Card'}}" href="#{{subreddit.url}}" style="background:url('{{subreddit.image}}') no-repeat center;">
               <h5 class="subreddit-name">{{ subreddit.name }} </h5>
-              <div class="subreddit-overlay"></div>
+              <!-- <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Listen</a> -->
+              <div id="{{ subreddit.url}} " class="modal">
+                <div class="modal-content">
+                  <h4>{{subreddit.url}}</h4>
+                  <!-- <iframe src="https://embed.spotify.com/?uri=spotify:trackset:PREFEREDTITLE:5Z7ygHQo02SUrFmcgpwsKW,1x6ACsKV4UdWS2FMuPFUiT,4bi73jCM02fMpkI11Lqmfe" frameborder="0" allowtransparency="true"></iframe> -->
+                </div>
+                <div class="modal-footer">
+                  <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">X</a>
+                </div>
+              </div>
             </div>
           </div>
+
+          </div>
+
         </div>
+
+
+
       </section>
-
-
-
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/js/materialize.min.js"></script>
   </body>

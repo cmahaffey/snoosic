@@ -9,28 +9,29 @@ angular.module('SnoosicManager')
 
       $scope.subreddits = [
         {
-          name: "hip hop",
-          url: "hipHop"
+          name: "Music",
+          url: "music",
+          image: "http://i.imgur.com/EdKXDLI.png"
         },
         {
-          name: "rock",
-          url: "rock"
+          name: "Indie Folk",
+          url: "indiefolk"
         },
         {
-          name: "country",
-          url: "country"
+          name: "Indie",
+          url: "indie"
         },
         {
-          name: "jazz",
-          url: "jazz"
+          name: "90s Music",
+          url: "90smusic"
         },
         {
-          name: "blues",
-          url: "blues"
+          name: "Listen To This",
+          url: "listentothis"
         },
         {
-          name: "folk",
-          url: "folk"
+          name: "Tree Music",
+          url: "treemusic"
         }
       ]
 
@@ -44,16 +45,19 @@ angular.module('SnoosicManager')
     }
 
     function cardHover(){
-      $('.subreddit').on("mouseover", function(e){
-        console.log(this);
-        $(this).css({"backgroundColor": "red"})
+      $('.subreddit-card').on("mouseover", function(e){
+        $(this).css({
+        "cursor": "pointer"
+        });
+        // $(this).find('.subreddit-overlay').show();
       });
     }
 
     function cardLeave(){
-      $('.subreddit').on("mouseleave", function(e){
-        console.log(this);
-        $(this).css({"backgroundColor": "grey"})
+      $('.subreddit-card').on("mouseleave", function(e){
+
+        // $(this).find('.subreddit-overlay').hide();
+
       });
     }
 
@@ -62,4 +66,6 @@ angular.module('SnoosicManager')
     getUrl();
     cardHover();
     cardLeave();
+
+    $('.modal-trigger').leanModal();
   });

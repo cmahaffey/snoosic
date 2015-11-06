@@ -4,14 +4,13 @@ body {
   padding-right: 10px;
 }
 
-.subreddit {
+.subreddit-card {
   height: 200px;
   width: 100%;
   margin-right: 5%;
   margin-bottom: 5%;
   padding-top: 2em;
-  background: grey;
-  background-size:cover;
+  background-size: cover;
   overflow:hidden;
 }
 
@@ -19,14 +18,19 @@ body {
 .subreddit-name{
 }
 
+.logo{
+  margin-top: -1em;
+  margin-bottom: -1.7em;
+
+}
 .subreddit-overlay {
-    width: 160px;
-    height: 160px;
+    width: 100%;
+    height: 200px;
     background-color: #ffb00f;
     border-radius: 15px;
     z-index: 1;
     opacity: 0.5;
     position: fixed;
-    top: 0.5em;
+    top: 0em;
     display:none;
 }
