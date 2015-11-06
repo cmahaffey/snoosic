@@ -20,5 +20,13 @@
   "bugs": {
     "url": "https://github.com/nilocy/snoosic/issues"
   },
-  "homepage": "https://github.com/nilocy/snoosic#readme"
+  "homepage": "https://github.com/nilocy/snoosic#readme",
+  "dependencies": {
+    "body-parser": "^1.14.1",
+    "express": "^4.13.3",
+    "mongod": "^1.3.0",
+    "mongodb": "^2.0.47",
+    "request": "^2.65.0"
+  },
+  "devDependencies": {}
 }
