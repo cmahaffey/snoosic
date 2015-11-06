@@ -1,8 +1,8 @@
 var express = require('express');
 var parser = require('body-parser');
 var path = require('path');
-var mongo = require('mongodb');
-var request = require('request');
+// var mongo = require('mongodb');
+// var request = require('request');
 var app = express();
 
 app.use(parser.urlencoded({ extended: false }));
@@ -15,23 +15,25 @@ app.listen( app.get('port'), function() {
 
 app.use('/', express.static(path.join(__dirname, 'public')));
 
-var client = mongo.MongoClient;
+// var client = mongo.MongoClient;
 
-var subreddits = [
-  "indiefolk",
-  "Music",
-  "ListenToThis",
-  "Indie",
-  "wereonspotify",
-  "indie_rock",
-  "electronicmusic",
-  "treemusic",
-  "DubStep",
-  "PostRock",
-  "Jazz",
-  "HipHopHeads"
-];
+// var subreddits = [
+//   "indiefolk",
+//   "Music",
+//   "ListenToThis",
+//   "Indie",
+//   "wereonspotify",
+//   "indie_rock",
+//   "electronicmusic",
+//   "treemusic",
+//   "DubStep",
+//   "PostRock",
+//   "Jazz",
+//   "HipHopHeads"
+// ];
 
+// client.connect( ( 'mongodb://localhost:27017/snoosic' ), function(error, db) {
+//   if(error){ console.log('DB error', error) } else { console.log('connected to Snoosic DB') }
 
 // client.connect( ( 'mongodb://localhost:27017/snoosic' ), function(error, db) {
 //   if(error){ console.log('DB error', error) } else { console.log('connected to Snoosic DB') }
