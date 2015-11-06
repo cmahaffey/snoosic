@@ -1,3 +1,32 @@
 body {
   text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.subreddit {
+  height: 200px;
+  width: 100%;
+  margin-right: 5%;
+  margin-bottom: 5%;
+  padding-top: 2em;
+  background: grey;
+  background-size:cover;
+  overflow:hidden;
+}
+
+
+.subreddit-name{
+}
+
+.subreddit-overlay {
+    width: 160px;
+    height: 160px;
+    background-color: #ffb00f;
+    border-radius: 15px;
+    z-index: 1;
+    opacity: 0.5;
+    position: fixed;
+    top: 0.5em;
+    display:none;
 }
