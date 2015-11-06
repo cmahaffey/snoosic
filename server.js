@@ -8,6 +8,15 @@ var app = express();
 app.use(parser.urlencoded({ extended: false }));
 app.use(parser.json());
 
+app.set('port', (process.env.PORT || 3000));
+app.listen( app.get('port'), function() {
+  console.log('listening... port %s', app.get('port') );
+});
+
+app.use('/', express.static(path.join(__dirname, 'public')));
+
+var client = mongo.MongoClient;
+
 var subreddits = [
   "indiefolk",
   "Music",
@@ -22,55 +31,64 @@ var subreddits = [
   "Jazz",
   "HipHopHeads"
 ];
-var domains = ["youtube.com", "spotify.com", "soundcloud.com", "youtu.be"];
-// setInterval(
-  // function(subreddit,domains){
-    var subreddit="Music";
-    var domains = ["youtube.com", "spotify.com", "soundcloud.com", "youtu.be"];
-    request("http://www.reddit.com/r/"+subreddit+".json?limit=100",function(error,response,body){
-
-          var data=JSON.parse(body);
-
-          var results = data.data.children.filter( function( post ){
-            return domains.indexOf( post.data.domain ) !== -1
-          }).map( function( post ) {
-            var result = post.data.title;
-            result = result.split(' [')[0];
-
-            return result;
-          });
-
-          for (var i = 0; i < results.length; i++) {
-
-            request("https://api.spotify.com/v1/search?q="+results[i]+"&type=track",function(error,response,body){
-
-              var songInfo=JSON.parse(body);
-              if(songInfo.tracks.items[0]){
-                console.log(songInfo.tracks.items[0].id);
-                // console.log(songInfo.tracks.items[0].album.images[2]); //height 300 add a .url if needbe. this is a hash with height, width and url
-                //find(subreddit), and push into the DATABASES array
-              }
-
-            });
-          }
-          // console.log(results);
-        // return results
-      });
-  // },6000);
 
 
-
-
-
-app.set('port', (process.env.PORT || 3000));
-app.listen( app.get('port'), function() {
-  console.log('listening... port %s', app.get('port') );
-});
-
-app.use('/', express.static(path.join(__dirname, 'public')));
-
-var client = mongo.MongoClient;
-
-client.connect( ( 'mongodb://localhost:27017/snoosic' ), function(error, db) {
-  if(error){ console.log(error) } else { console.log('connected to Snoosic DB') }
-});
+// client.connect( ( 'mongodb://localhost:27017/snoosic' ), function(error, db) {
+//   if(error){ console.log('DB error', error) } else { console.log('connected to Snoosic DB') }
+//
+//   // setInterval(
+//     // function(){
+//     console.log('clearing playlists');
+//     db.collection('tracklists').remove({});
+//
+//     // for(var j=0; j<subreddits.length;j++){
+//     var createPlaylist = function(subreddit){
+//
+//       var domains = ["youtube.com", "spotify.com", "soundcloud.com", "youtu.be"];
+//       request("http://www.reddit.com/r/"+subreddit+".json",function(error,response,body){
+//         if(error || body.indexOf('<html>') !== -1 ){
+//           console.log('nope')
+//         } else {
+//           var data = JSON.parse(body);
+//
+//           var results = data.data.children.filter( function( post ){
+//             return post.data.title !== '' && post.data.title.indexOf('[') !== 0 && domains.indexOf( post.data.domain ) !== -1
+//           }).map( function( post ) {
+//             var result = post.data.title;
+//             result = result.split('[')[0];
+//             return result;
+//           });
+//           console.log(results);
+//
+//           for (var i = 0; i < results.length-1; i++) {
+//             console.log("i is", i);
+//
+//             request("https://api.spotify.com/v1/search?q="+results[i]+"&type=track",function(error,response,body){
+//               if(error || body.indexOf('<html>') !== -1 ){
+//                 console.log("ahh, nuttbunnies");
+//               } else {
+//                 var songInfo = JSON.parse(body);
+//                 if(songInfo.tracks){
+//                   if(songInfo.tracks.items[0].id){
+//                     console.log('track id', songInfo.tracks.items[0].id, songInfo.tracks.items[0].album.images[2].url);
+//                     if(i=0){
+//                       console.log('adding first song to db playlist '+subreddit, songInfo.tracks.items[0].id, songInfo.tracks.items[0].album.images[2].url);
+//                       db.collection('tracklists').insert({ playlist: subreddit, img_url: img_url, songs: [ songInfo.tracks.items[0].id ] })
+//                     } else {
+//                       console.log('adding another song to playlist '+subreddit, songInfo.tracks.items[0].id);
+//                       db.collection('tracklists').update(
+//                         { playlist: subreddit },
+//                         { $push: { songs: songInfo.tracks.items[0].id }
+//                       });
+//                     }
+//                   }
+//                 }
+//               }
+//             });
+//           }
+//         }
+//       });
+//     }
+//     createPlaylist( "music" );
+// // },6000);
+// });
