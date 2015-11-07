@@ -15,6 +15,14 @@ app.listen( app.get('port'), function() {
 
 app.use('/', express.static(path.join(__dirname, 'public')));
 
+
+//new thoughts on this. Capture the reddit api in database. end call.
+//render api page as JSON
+//new call, capture the spotify IDs.
+//either mod our json page with new info OR make new api page, both work.
+//on click, now do a socket.io that concats id's into what is currently saved in app.js
+
+
 // var client = mongo.MongoClient;
 
 // var subreddits = [
