@@ -22,16 +22,20 @@
 
             <h5>discover music through Reddit</h5>
           </div>
-            <div class="col s1 offset-s2">
-               <h3 class="reddit-slash">/r/</h3>
-            </div>
-            <div class="input-field col s6">
-               <input type="text" class= "search" name="searchbox" ng-model="searchQuery">
-            </div>
+
         </div>
 
       <!-- Update -->
         <div class="row" >
+          <div class="col s1 offset-s2">
+             <h3 class="reddit-slash">/r/</h3>
+          </div>
+          <div class="input-field col s6">
+             <input type="text" class= "search" name="searchbox" ng-model="searchQuery">
+          </div>
+        </div>
+
+        <div class="row">
           <div class="col s12 m4 l2" ng-repeat="subreddit in subreddits | filter:searchQuery">
             <div class="wrap">
               <div class="subreddit-overlay"></div>
@@ -40,9 +44,9 @@
               <!-- <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Listen</a> -->
               <div id="{{ subreddit.url}} " class="modal">
                 <div class="modal-content">
-                  <h4>{{subreddit.url}}</h4>
+                  <h4>{{subreddit.name}}</h4>
 
-                  <span class="alternate" ng-bind-html="makeHTML(subreddit.spotifyURL)"></span>
+                  <span class="alternate" ng-bind-html="makeHTML(subreddit.spotifyURL())"></span>
 
                 </div>
               </div>
