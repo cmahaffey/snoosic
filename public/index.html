@@ -36,7 +36,7 @@
         </div>
 
         <div class="row">
-          <div class="col s12 m4 l2" ng-repeat="subreddit in subreddits | filter:searchQuery">
+          <div class="col s12 m4 l2" ng-repeat="subreddit in subreddits | filter:searchQuery" ng-click="getUrl()">
             <div class="wrap">
               <div class="subreddit-overlay"></div>
             <div class="subreddit-card modal-trigger" id="{{ subreddit.url + 'Card'}}" href="#{{subreddit.url}}" style="background:url('{{subreddit.image}}') no-repeat center;background-size:contain;">
