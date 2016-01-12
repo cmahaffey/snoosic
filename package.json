@@ -4,7 +4,8 @@
   "description": "a spotify tracklist generator for reddit music subreddits",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -24,10 +25,12 @@
   "dependencies": {
     "body-parser": "^1.14.1",
     "express": "^4.13.3",
+    "kerberos": "0.0.17",
     "mongodb": "^2.0.47",
     "mongoose": "^4.3.5",
     "parser": "^0.1.4",
     "path": "^0.12.7",
     "request": "^2.65.0"
-  }
+  },
+  "devDependencies": {}
 }

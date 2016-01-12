@@ -55,38 +55,21 @@ angular.module('SnoosicManager')
         }
       ]
 
+
+      $scope.getUrl = function(){
+          $('.modal-trigger').leanModal();
+      }
+
+
+
     }]);
 
 // Load Playlist for clicked box
-    function getUrl(){
-      $('.subreddit').on("click", function(e){
-        console.log(this.id);
-
-
-      });
-    }
-
-    function cardHover(){
-      $('.subreddit-card').on("mouseover", function(e){
-        $(this).css({
-        "cursor": "pointer"
-        });
-      });
-    }
-
-    function cardLeave(){
-      $('.subreddit-card').on("mouseleave", function(e){
-
-        // $(this).find('.subreddit-overlay').hide();
-
-      });
-    }
 
 
   $(document).ready(function(){
-    getUrl();
-    cardHover();
-    cardLeave();
+    // getUrl();
+    // cardHover();
+    // cardLeave();
 
-    $('.modal-trigger').leanModal();
   });
