@@ -4,7 +4,7 @@ var path = require('path');
 var mongo = require('mongodb');
 var request = require('request');
 var app = express();
-
+var mongoose = require('mongoose')
 app.use(parser.urlencoded({ extended: false }));
 app.use(parser.json());
 
@@ -25,11 +25,22 @@ app.use('/', express.static(path.join(__dirname, 'public')));
 //new call, capture the spotify IDs.
 //either mod our json page with new info OR make new api page, both work.
 //on click, now do a socket.io that concats id's into what is currently saved in app.js
+mongoose.connect(process.env.MONGOLAB_URI||'mongodb://localhost/snoosic')
+
+var SubRedditSchema = new mongoose.Schema({
+  name: {type: String},
+  url: {type: String},
+  image: {type: String},
+  spotifyIDs: {type: String}
+})
+var Music= new mongoose.Schema('Music',SubRedditSchema)
+
+//OLD MONGODB STUFF
+// var client = mongo.MongoClient;
+//
+// client.connect( ( 'mongodb://localhost:27017/snoosic' ), function(error, db) {
 
 
-var client = mongo.MongoClient;
-
-client.connect( ( 'mongodb://localhost:27017/snoosic' ), function(error, db) {
   if(error){ console.log('DB error', error) } else { console.log('connected to Snoosic DB') }
 
 
@@ -54,6 +65,7 @@ client.connect( ( 'mongodb://localhost:27017/snoosic' ), function(error, db) {
       var domains = ["youtube.com", "spotify.com", "soundcloud.com", "youtu.be"];
       //loop through subreddits
       for (var i = 0; i < subreddits.length; i++) {
+
         //self invoking for the for loop
         (function(){
           var subreddit=subreddits[i]
